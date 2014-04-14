@@ -8,11 +8,15 @@ if(isset($_SESSION['username'])){//authenticated user
 <html>
 <head><title>Admin Login Page</title></head>
 <body>
-<?php 
-	$passwords = array("pbryson29" 	=>  "a745d8007daf0f1cb201bed21734a68e779a4875",
-						"fmpdlh"	=>	"d6a449461c10fc42e78054753cd8eba392f73c32",
-						"jbryson3"	=>	"b81b5dbeb213a471651c1ff6bd4c648cb21dc85e");
-						
+<?php
+	$passwords = array("admin" => "3c37bbd301db9c11366b41e7d30ff72f732e659a"); // Admin01
+
+	/**
+	* Uncomment this line to add a password.  Go to this page and enter in desired password,
+	* copy/paste that hash into the $passwords array and then recomment this line.
+	*/
+	//echo sha1($_POST['password'].substr($_POST['username'],-3));
+
 	if(sha1($_POST['password'].substr($_POST['username'],-3)) == $passwords[$_POST['username']]){
 			$_SESSION['username'] = $_POST['username'];
 			print <<<ENDOFTEXT
@@ -21,11 +25,11 @@ if(isset($_SESSION['username'])){//authenticated user
 				</script>
 ENDOFTEXT;
 	} else{
-	
+
 	if(isset($_POST['username'])){
 		echo "<div style='color:red;'>Username/Password combination isn't correct.</div></br/>";
 	}
-		
+
 	echo <<<ENDOFTEXT
 	<h1>VBS Admin Login Page</h1>
 	<form action="adminLogin.php" method="POST">
@@ -33,7 +37,7 @@ ENDOFTEXT;
 		Password: <input type="password" name="password" /><br/>
 		<input type="submit" value="Login" />
 	</form>
-	
+
 	<style type="text/css">
 		html{
 			text-align:center;
@@ -41,7 +45,7 @@ ENDOFTEXT;
 	</style>
 ENDOFTEXT;
 
-} 
+}
 ?>
 </body>
 </html>

@@ -15,6 +15,7 @@ You'll need a PHP capable server as well as a database.  I have tested with MySQ
 ##Admin Control Panel
 
 The app features an admin control panel. You can get there by going to {host}/admin/adminLogin.php
+The default login for the control panel is admin/Admin01 it should be changed by following the instructions in adminLogin.php
 
 ###Menu.php
 Once logged in as an admin, the menu.php page shows how many kids are currently signed up (in real time) as well as some additional actions you may take
