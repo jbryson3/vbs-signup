@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>Participant Form</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+		<link type="text/css" rel="stylesheet" media="print" href="participantFormPrint.css" />
+		
+	</head>
+	<body>
+
+	<style type="text/css">		
+		td{
+			width:50%;
+			vertical-align:middle;
+			padding-right:5px;
+			padding-left:5px;
+			white-space:nowrap;
+		}
+		
+		fieldset{
+			width:50%;
+			margin-left:auto;
+			margin-right:auto;
+		}
+		
+		textarea{
+			overflow:auto;
+		}
+		
+		legend{
+			font-weight:bold;
+		}
+		
+		.showPrint{
+			display:none;
+			
+		}
+		
+		.hidePrint{
+			display:inline;
+		}
+		
+		h1, h2, h3, h4{
+			margin:0px auto;
+			font-weight:normal;
+			text-align:center;
+		}
+		
+		html{
+			padding:0px;
+			margin-top:0px;
+		}
+		
+		ul{
+			list-style:none inside none;
+			padding:0px;
+			margin:0px;
+		}
+		
+		li{
+			float:left;
+			padding:6px;
+		}
+		
+	</style>
+	
+	<h1>Vacation Bible School Registration Form</h1>
+	<h3>Ages 4 years (By Sept. 30) through completed 6th Grade</h3>
+	<h4 class="hidePrint" style="display:block;">One form needed for each child </h4>
+	<h4 class="showPrint">One form needed for each child (print clearly) or</h4>
+	<h4 class="showPrint">Register online at</h3>
+	<h2 class="showPrint" style="font-weight:bold;">www.westwood-baptist.org</h2>
+	
+		<form action="addParticipant.php" method="POST">
+			<fieldset>
+				<legend>Personal Information</legend>
+				<table style="width:100%"><tr><td>
+					<div style="text-align:right;" id="firstName"><span class="hidePrint">*</span> First Name:</div></td><td><input type="text" name="firstName" style="width:100%" maxlength="30"/>
+						</td></tr><tr><td>
+					<div style="text-align:right;" id="lastName"><span class="hidePrint">*</span> Last Name:</div></td><td><input type="text" name="lastName" style="width:100%" maxlength="30"/>
+				</td></tr></table>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Address & Phone</legend>
+				<table style="width:100%"><tr><td>
+					<div style="text-align:right;" id="address"><span class="hidePrint">*</span> Address:</div></td><td><input type="text" name="address" style="width:100%" maxlength="40"/>
+						</td></tr><tr><td>
+					<div style="text-align:right;" id="aptNum">Apt #:</div></td><td><input type="text" name="aptNum" style="width:100%" maxlength="6" />
+					</td></tr><tr><td>
+					<div style="text-align:right;" id="city"><span class="hidePrint">*</span> City:</div></td><td><input type="text" name="city" style="width:100%" maxlength="30"/>
+					</td></tr><tr><td>
+					<div style="text-align:right;" id="state"><span class="hidePrint">*</span> State:</div></td><td><input type="text" name="state" style="width:100%" maxlength="20"/>
+					</td></tr><tr><td>
+					<div style="text-align:right;" id="zipCode"><span class="hidePrint">*</span> Zip/Postal Code:</div></td><td><input type="text" name="zipCode" style="width:100%" maxlength="10"/>
+					</td></tr><tr><td>
+					<div style="text-align:right;" id="homePhone"><span class="hidePrint">*</span> Home Phone:</div></td><td><input type="text" name="homePhone" style="width:100%" maxlength="12"/>
+					</td></tr><tr><td>
+					<div style="text-align:right;" id="otherPhone">Other Phone:</div></td><td><input type="text" name="otherPhone" style="width:100%" maxlength="12"/>
+					</td></tr><tr><td>
+					<div style="text-align:right;" id="emailAddress">Email Address:</div></td><td><input type="text" name="emailAddress" style="width:100%" maxlength="35"/>
+					
+				</td></tr></table>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Emergency & Guardian Information</legend>
+				<table style="width:100%"><tr><td>
+					<div style="text-align:right;" id="allergiesAndMedicalInfo">Allergies & Medical Information:</div></td><td></td>
+						</td></tr><tr><td colspan=2><textarea name="allergiesAndMedicalInfo" style="width:100%; height:60px;"></textarea></td>
+						</tr><tr><td>
+					<div style="text-align:right;" id="emergencyContactName"><span class="hidePrint">*</span> Emergency Contact Name:</div></td><td><input type="text" name="emergencyContactName" style="width:100%" maxlength="50"/>
+					</td></tr><tr><td>
+					<div style="text-align:right;" id="emergencyContactPhone"><span class="hidePrint">*</span> Emergency Contact Phone:</div></td><td><input type="text" name="emergencyContactPhone" style="width:100%" maxlength="12"/>
+					</td></tr><tr><td>
+					<div style="text-align:right;" id="emergencyContactRelationship"><span class="hidePrint">*</span> Emergency Contact Relationship:</div></td><td><input type="text" name="emergencyContactRelationship" style="width:100%" maxlength="40"/>
+					</td></tr><tr><td>
+					<div style="text-align:right;" id="primaryPickupName"><span class="hidePrint">*</span> Adult who will pick-up child:</div></td><td><input type="text" name="primaryPickupName" style="width:100%" maxlength="50"/>
+					</td></tr><tr><td>
+					<div style="text-align:right;" id="primaryPickupRelationship"><span class="hidePrint">*</span> Relationship to child:</div></td><td><input type="text" name="primaryPickupRelationship" style="width:100%" maxlength="50"/>
+				</td></tr></table>
+			</fieldset>
+			
+			<fieldset id="last">
+				<legend>Additional Information</legend>
+				<table style="width:100%"><tr><td>
+					<div style="text-align:right;" id="homeChurch">Home Church:</div></td><td><input type="text" name="homeChurch" style="width:100%" maxlength="50"/>
+						</td></tr><tr><td>
+					<div style="text-align:right;" id="dateOfBirth"><span class="hidePrint">*</span> Date of Birth:</div></td><td><input type="text" name="dateOfBirth" style="width:100%" maxlength="20"/>
+					</td></tr><tr><td>
+					<div style="text-align:right;" id="gradeJustCompleted">Grade Just Completed:</div></td><td><input type="text" name="gradeJustCompleted" style="width:100%" maxlength="40"/>
+					</td></tr><tr><td>
+					<div style="text-align:right;" id="tShirtSize">Child's T-Shirt Size<span class="hidePrint">:</span><span class="showPrint"> (circle one)</span></div></td><td>
+						<span class="showPrint">
+						
+						<fieldset style="float:left; width:auto !important; font-size:20px; background-color:#eee;">
+						<legend style="font-size:12px;">Toddler</legend>
+							<ul>
+								<li>2T</li>
+								<li>3T</li>
+								<li>4T</li>
+							</ul>
+						</fieldset>
+						
+						<fieldset style="float:left; width:auto !important; font-size:20px; background-color:#eee;">
+						<legend style="font-size:12px;">Youth</legend>
+							<ul>
+								<li>S</li>
+								<li>M</li>
+								<li>L</li>
+								<li>XL</li>
+							</ul>
+						</fieldset>
+						
+						<fieldset style="float:left; width:auto !important; font-size:20px; background-color:#eee;">
+						<legend style="font-size:12px;">Adult</legend>
+							<ul>
+								
+								<li>S</li>
+								<li>M</li>
+								<li>L</li>
+								
+							</ul>
+						</fieldset>
+						</span>
+						
+						<span class="hidePrint">
+							<select name="tShirtSize">
+								<option value="none" selected="true">Click Here to Select Size</option>
+								<option value="toddler2T">Toddler 2T</option>
+								<option value="toddler3T">Toddler 3T</option>
+								<option value="toddler4T">Toddler 4T</option>
+								<option value="youthS">Youth S (Size 6-8)</option>
+								<option value="youthM">Youth M (Size 10-12)</option>
+								<option value="youthL">Youth L (Size 14-16)</option>
+								<option value="youthXL">Youth XL (Size 18-20)</option>
+								<option value="adultS">Adult S</option>
+								<option value="adultM">Adult M</option>
+								<option value="adultL">Adult L</option>
+							</select>							
+						</span>
+				</td></tr></table>
+				
+			</fieldset>
+			<fieldset style="border:none;">
+				<div style="float:right;" class="hidePrint">* - Required Fields</div>
+				<div style="text-align:center;"><input class="hidePrint" style="text-align:center;" type="submit" value="Add Participant"></input></div>
+			</fieldset>
+		</form>
+		
+		<script type="text/javascript">
+		
+		/*hu = window.location.search.substring(1);
+		gy = hu.split("&");
+		for (i=0;i<gy.length;i++) {
+			var obj = document.getElementById(gy[i]);
+			obj.style.color = 'red';
+		}*/
+		
+		</script>
+	</body>
+</html>
